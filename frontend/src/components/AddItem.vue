@@ -15,9 +15,6 @@
   </div>
 </template>
 
-<style scoped>
-</style>
-
 <script lang="js">
 
 import ItemService from "../ItemService.js";

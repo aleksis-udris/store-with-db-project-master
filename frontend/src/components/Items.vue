@@ -1,7 +1,44 @@
+<!--suppress JSUnresolvedReference -->
 <style scoped>
 .table-button {
   margin-left: 1px;
   margin-right: 1px;
+}
+
+table {
+  box-shadow:
+      5px 0 30px #202020,
+      -5px 0 30px #202020,
+      0 -5px 30px #202020,
+      0 5px 30px #202020;
+  border-radius: 10px;
+  padding: 2px;
+}
+tbody {
+  background: #202020;
+}
+thead {
+  background: #202020;
+}
+
+h1 {
+  margin-bottom: 50px;
+}
+
+.th-top-right {
+  border-top-right-radius: 10px;
+}
+
+.th-top-left {
+  border-top-left-radius: 10px;
+}
+
+.td-bottom-right {
+  border-bottom-right-radius: 10px;
+}
+
+.td-bottom-left {
+  border-bottom-left-radius: 10px;
 }
 </style>
 
@@ -11,27 +48,33 @@
     <table>
       <thead>
       <tr>
-        <th>Name</th>
+        <th class="th-top-left">Name</th>
         <th>Type</th>
         <th>Price</th>
         <th>Count</th>
         <th>Date When Added</th>
         <th>Expiration Date</th>
-        <th>Actions</th>
+        <th class="th-top-right">Actions</th>
       </tr>
       </thead>
       <tbody>
-      <tr v-for="item in items">
-        <td>{{item.name}}</td>
+      <tr v-for="(item, index) in items"
+          :key="index"
+          :class="{'last-row': index === items.length - 1}">
+
+        <td :class="{'td-bottom-left': index === items.length - 1}">
+          {{item.name}}
+        </td>
+
         <td>{{item.type}}</td>
         <td>{{item.price}}</td>
         <td>{{item.count}}</td>
         <td>{{item.added_to_register}}</td>
-        <td>{{item.expiration}}</td>
-        <td>
+        <td> {{item.expiration}}</td>
+
+        <td :class="{'td-bottom-right': index === items.length - 1}">
           <button @click="deleteItem(item.id)" class="table-button">Delete</button>
           <button @click="editItem(item.id)" class="table-button">Edit</button>
-          <button @click="$router.push('/item/' + item.id)">View</button>
         </td>
       </tr>
       </tbody>

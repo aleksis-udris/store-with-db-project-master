@@ -5,7 +5,7 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name="item")
+@Table(name="items")
 public class Item {
 
     @Id
@@ -25,7 +25,7 @@ public class Item {
     @Column(name = "count")
     private int count;
 
-    @Column(name = "added_to_register")
+    @Column(name = "DOR")
     private String added_to_register;
 
     @Column(name = "expiration")

@@ -3,13 +3,11 @@ import './style.css';
 import App from './App.vue';
 import {createRouter, createWebHistory} from "vue-router";
 import AddItem from './components/AddItem.vue';
-import Item from './components/Item.vue';
-import ItemView from './components/ItemView.vue';
+import Items from './components/Items.vue';
 
 const routes = [
-    {path: '/items', component: Item},
+    {path: '/items', component: Items},
     {path: '/add-item', component: AddItem},
-    {path: '/item/:id', component: ItemView},
 ];
 
 const router = createRouter({
