@@ -1,4 +1,4 @@
-package com.aleksis.backend;
+package com.aleksis.backend.item;
 
 import com.aleksis.backend.models.CreateCommand;
 import com.aleksis.backend.item.models.Item;

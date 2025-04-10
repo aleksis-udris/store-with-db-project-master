@@ -23,7 +23,7 @@ public class AddItemService implements Command<Item, ItemDTO> {
 
     @Override
     public ResponseEntity<ItemDTO> execute(Item input) {
-        input.setAdded_to_register(LocalDate.now() + " " + LocalTime.now());
+        input.setAdded_to_register(LocalDate.now() + " " + LocalTime.of(LocalTime.now().getHour(), LocalTime.now().getMinute(), LocalTime.now().getSecond()));
         System.out.println(input.getAdded_to_register());
 
         ItemValidator.execute(input);
