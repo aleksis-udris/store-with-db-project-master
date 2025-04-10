@@ -18,6 +18,7 @@ a {
   color: #646cff;
   text-decoration: inherit;
 }
+
 a:hover {
   color: #535bf2;
 }
@@ -48,13 +49,63 @@ button {
   background-color: #242424;
   cursor: pointer;
   transition: border-color 0.25s;
+  box-shadow: 5px 5px 10px #151515,
+  -5px -5px 10px #3a3a3a;
 }
 
 button:hover {
+  box-shadow:none;
+}
+
+button:active {
   box-shadow: inset 5px 5px 10px #151515,
   inset -5px -5px 10px #3a3a3a;
 }
 
+nav {
+  button {
+    margin-left: 5px;
+    margin-right: 5px;
+    background: #5d7364;
+    outline: none;
+
+    box-shadow:
+            5px 5px 10px #4a5c4e,
+            -5px -5px 10px #6d8172;
+  }
+
+  button:hover {
+    box-shadow: none;
+    outline: none;
+  }
+
+  button:active {
+    box-shadow:
+            inset 5px 5px 10px #4a5c4e,
+            inset -5px -5px 10px #6d8172;
+  }
+}
+
+table {
+  box-shadow:
+          5px 0 30px #202020,
+          -5px 0 30px #202020,
+          0 -5px 30px #202020,
+          0 5px 30px #202020;
+  border-radius: 10px;
+  padding: 2px;
+
+  button {
+    box-shadow: 5px 5px 10px #121212,
+    -5px -5px 10px #272727;
+    margin: 0.6em;
+    background-color: #202020;
+  }
+
+  button:active {
+
+  }
+}
 td {
   padding: 0.6em 1.2em;
 }
@@ -145,4 +196,89 @@ html::-webkit-scrollbar-track {
 html::-webkit-scrollbar-thumb {
   border-radius: 10px;
   background-color: #141414;
+}
+
+.pop-up-container {
+  margin: 70px auto;
+  padding: 20px;
+  background: #191919;
+  border-radius: 10px;
+  width: 40%;
+  height: auto;
+  position: fixed;
+  top: 0;
+  right: 30%;
+  transition: all 5s ease-in-out;
+
+  button {
+    background-color: #191919;
+    box-shadow: 5px 5px 10px #141414,
+    -5px -5px 10px #242424;
+  }
+
+  button:hover {
+    box-shadow: none;
+  }
+
+  button:active {
+    box-shadow: inset 5px 5px 10px #141414,
+    inset -5px -5px 10px #242424;
+  }
+
+  input {
+    width: 100%;
+    height: 50px;
+    margin: 5px;
+    border-radius: clamp(6px, 5px, 2px);
+    border: 1px solid transparent;
+    background-color: #191919;
+    text-align: center;
+    font-size: 20px;
+    box-shadow: inset 5px 5px 10px #141414,
+    inset -5px -5px 10px #242424;
+  }
+
+  input::placeholder {
+  color: #edf0ed;
+  }
+
+  h3 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 3vw;
+  }
+}
+
+#alert {
+  #delete {
+    margin: 1em;
+    box-shadow: 5px 5px 10px #111111,
+    -5px -5px 10px #303030;
+  }
+
+  #delete:hover {
+    background-color: #cf1827;
+    box-shadow: none;
+  }
+
+  #delete:active {
+    box-shadow: inset -5px -5px 5px #d42f3d,
+    inset 5px 5px 5px #a6131f;
+  }
+
+  #cancel {
+    margin: 1em;
+    box-shadow: 5px 5px 10px #111111,
+    -5px -5px 10px #303030;
+  }
+
+  #cancel:hover {
+    background-color: #38a845;
+    box-shadow: none;
+  }
+
+  #cancel:active {
+    box-shadow: inset -5px -5px 5px #32973e,
+    inset 5px 5px 5px #2d8637;
+  }
 }

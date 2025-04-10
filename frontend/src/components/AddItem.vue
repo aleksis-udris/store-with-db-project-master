@@ -1,4 +1,5 @@
 <template>
+  <h1>Add an Item</h1>
   <div>
     <form @submit.prevent="addItem">
       <input class="input-normal" v-model="item.name" placeholder="Name">
@@ -10,10 +11,20 @@
 
         <input class="input-date" v-model="item.expiration" type="date" value="2025-02-27">
       </div>
-      <button class="submit-btn" type="submit"> Add Item</button>
+      <button class="submit-btn" type="submit">Add</button>
     </form>
   </div>
 </template>
+
+<style scoped>
+  h1 {
+    text-transform: uppercase;
+  }
+
+  button {
+    text-transform: uppercase;
+  }
+</style>
 
 <script lang="js">
 
