@@ -1,4 +1,4 @@
-package com.aleksis.backend.models;
+package com.aleksis.backend.exceptions;
 
 import lombok.Getter;
 

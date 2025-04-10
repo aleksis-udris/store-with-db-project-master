@@ -1,6 +1,5 @@
 package com.aleksis.backend.item;
-
-import com.aleksis.backend.models.CreateCommand;
+import com.aleksis.backend.item.models.CreateCommand;
 import com.aleksis.backend.item.models.Item;
 import com.aleksis.backend.item.models.ItemDTO;
 import com.aleksis.backend.item.services.*;

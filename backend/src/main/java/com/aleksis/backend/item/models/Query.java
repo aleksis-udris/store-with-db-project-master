@@ -1,7 +1,7 @@
-package com.aleksis.backend.models;
+package com.aleksis.backend.item.models;
 
 import org.springframework.http.ResponseEntity;
 
-public interface Command <I, O>{
+public interface Query<I, O> {
     ResponseEntity<O> execute(I input);
 }

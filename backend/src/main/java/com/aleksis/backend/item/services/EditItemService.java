@@ -1,8 +1,8 @@
 package com.aleksis.backend.item.services;
 
 import com.aleksis.backend.item.models.*;
-import com.aleksis.backend.models.Command;
-import com.aleksis.backend.models.CreateCommand;
+import com.aleksis.backend.item.models.Command;
+import com.aleksis.backend.item.models.CreateCommand;
 import com.aleksis.backend.validators.ItemValidator;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;

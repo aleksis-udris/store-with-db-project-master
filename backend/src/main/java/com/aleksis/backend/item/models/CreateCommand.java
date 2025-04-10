@@ -1,6 +1,5 @@
-package com.aleksis.backend.models;
+package com.aleksis.backend.item.models;
 
-import com.aleksis.backend.item.models.Item;
 import lombok.Data;
 
 @Data

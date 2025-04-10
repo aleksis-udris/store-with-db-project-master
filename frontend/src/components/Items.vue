@@ -54,7 +54,7 @@ h1 {
         </td>
 
         <td>{{item.type}}</td>
-        <td>{{item.price}}</td>
+        <td>{{item.price}} €</td>
         <td>{{item.count}}</td>
         <td>{{item.added_to_register}}</td>
         <td> {{item.expiration}}</td>
@@ -72,7 +72,7 @@ h1 {
     <button @click="cancel" id="cancel">Cancel</button>
   </div>
   </div>
-  <div v-if="editableItem" class="pop-up-container">
+  <div v-if="editableItem"  class="pop-up-container">
     <h3>Edit Item</h3>
     <form @submit.prevent="updateItem">
       <input v-model="editableItem.name"/>

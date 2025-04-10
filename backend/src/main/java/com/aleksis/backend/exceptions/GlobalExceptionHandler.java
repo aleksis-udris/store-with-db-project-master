@@ -1,7 +1,6 @@
 package com.aleksis.backend.exceptions;
 
 import org.springframework.http.HttpStatus;
-import com.aleksis.backend.models.ErrorResponse;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
