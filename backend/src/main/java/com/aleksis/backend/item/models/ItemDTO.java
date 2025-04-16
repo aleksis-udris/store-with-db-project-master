@@ -5,6 +5,7 @@ import lombok.Data;
 @Data
 public class ItemDTO {
     private Integer id;
+    private String bar_code;
     private String name;
     private String type;
     private double price;
@@ -14,6 +15,7 @@ public class ItemDTO {
 
     public ItemDTO(Item item) {
         this.id = item.getId();
+        this.bar_code = item.getBar_code();
         this.name = item.getName();
         this.type = item.getType();
         this.price = item.getPrice();

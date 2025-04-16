@@ -6,6 +6,8 @@
     <nav class="header">
       <button @click="$router.push('/items')">Item List</button>
       <button @click="$router.push('/add-item')">Add an Item</button>
+      <button @click="$router.push('/login')">Log In</button>
+      <button @click="$router.push('/signup')">Sign Up</button>
     </nav>
   </div>
   <div>

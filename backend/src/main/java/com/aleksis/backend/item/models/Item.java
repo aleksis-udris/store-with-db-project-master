@@ -13,6 +13,9 @@ public class Item {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
+    @Column(name = "bar_code")
+    private String bar_code;
+
     @Column(name = "name")
     private String name;
 

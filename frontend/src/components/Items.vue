@@ -39,6 +39,7 @@ h1 {
         <th>Type</th>
         <th>Price</th>
         <th>Count</th>
+        <th>Bar Code</th>
         <th>Date When Added</th>
         <th>Expiration Date</th>
         <th class="th-top-right">Actions</th>
@@ -56,6 +57,7 @@ h1 {
         <td>{{item.type}}</td>
         <td>{{item.price}} €</td>
         <td>{{item.count}}</td>
+        <td>{{item.bar_code}}</td>
         <td>{{item.added_to_register}}</td>
         <td> {{item.expiration}}</td>
 
@@ -79,9 +81,10 @@ h1 {
       <input v-model="editableItem.type"/>
       <input v-model="editableItem.price" type="number" step="0.01"/>
       <input v-model="editableItem.count" type="number"/>
+      <input v-model="editableItem.bar_code">
       <input v-model="editableItem.expiration" type="date" value="2025-03-26"/>
-      <button type="submit">Update</button>
-      <button @click="cancel()">Cancel</button>
+      <button type="submit" id="confirm">Update</button>
+      <button @click="cancel()" id="cancel">Cancel</button>
     </form>
   </div>
 </template>

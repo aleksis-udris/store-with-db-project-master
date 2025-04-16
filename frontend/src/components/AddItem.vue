@@ -2,8 +2,9 @@
   <h1>Add an Item</h1>
   <div>
     <form @submit.prevent="addItem">
-      <input class="input-normal" v-model="item.name" placeholder="Name">
-      <input class="input-normal" v-model="item.type" placeholder="Type">
+      <input v-model="item.name" placeholder="Name">
+      <input v-model="item.type" placeholder="Type">
+      <input v-model="item.bar_code" placeholder="Bar Code">
       <div class="container">
         <input class="number-input" v-model="item.price" placeholder="Price" type="number" step="0.01">
 
@@ -38,6 +39,7 @@ export default {
         type: '',
         price: 0.00,
         count: 0,
+        bar_code: '',
         date: ''
       }
     };
@@ -49,6 +51,7 @@ export default {
         this.item.type = '';
         this.item.price = 0.00;
         this.item.count = 0;
+        this.item.bar_code = '';
         this.item.date = '';
       });
     }

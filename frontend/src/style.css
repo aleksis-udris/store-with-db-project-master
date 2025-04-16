@@ -249,36 +249,50 @@ html::-webkit-scrollbar-thumb {
   }
 }
 
-#alert {
-  #delete {
-    margin: 1em;
-    box-shadow: 5px 5px 10px #111111,
-    -5px -5px 10px #303030;
-  }
+#delete {
+  margin: 1em;
+  box-shadow: 5px 5px 10px #111111,
+  -5px -5px 10px #303030;
+}
 
-  #delete:hover {
-    background-color: #cf1827;
-    box-shadow: none;
-  }
+#delete:hover {
+  background-color: #cf1827;
+  box-shadow: none;
+}
 
-  #delete:active {
-    box-shadow: inset -5px -5px 5px #d42f3d,
-    inset 5px 5px 5px #a6131f;
-  }
+#delete:active {
+  box-shadow: inset -5px -5px 5px #d42f3d,
+  inset 5px 5px 5px #a6131f;
+}
 
-  #cancel {
-    margin: 1em;
-    box-shadow: 5px 5px 10px #111111,
-    -5px -5px 10px #303030;
-  }
+#cancel {
+  margin: 1em;
+  box-shadow: 5px 5px 10px #111111,
+  -5px -5px 10px #303030;
+}
 
-  #cancel:hover {
-    background-color: #38a845;
-    box-shadow: none;
-  }
+#cancel:hover {
+  background-color: #f4b800;
+  box-shadow: none;
+}
 
-  #cancel:active {
-    box-shadow: inset -5px -5px 5px #32973e,
-    inset 5px 5px 5px #2d8637;
-  }
+#cancel:active {
+  box-shadow: inset -5px -5px 5px #f6c633,
+  inset 5px 5px 5px #c39300;
+}
+
+#confirm {
+  margin: 1em;
+  box-shadow: 5px 5px 10px #111111,
+  -5px -5px 10px #303030;
+}
+
+#confirm:hover {
+  background-color: #38a845;
+  box-shadow: none;
+}
+
+#confirm:active {
+  box-shadow: inset -5px -5px 5px #32973e,
+  inset 5px 5px 5px #2d8637;
 }

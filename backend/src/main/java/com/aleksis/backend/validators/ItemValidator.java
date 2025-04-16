@@ -26,5 +26,13 @@ public class ItemValidator {
         if (expDate.isBefore(LocalDate.now()) || expDate.isEqual(LocalDate.now())) {
             throw new ItemValueNotValidException(ErrorMessages.ITEM_EXP_DATE_NULL.getMessage());
         }
+
+        if (item.getBar_code().chars().anyMatch(Character::isAlphabetic)) {
+            throw new ItemValueNotValidException(ErrorMessages.ITEM_BARCODE_IS_INT.getMessage());
+        }
+
+        if (item.getBar_code().isEmpty()) {
+            throw new ItemValueNotValidException(ErrorMessages.ITEM_BARCODE_IS_NULL.getMessage());
+        }
     }
 }
