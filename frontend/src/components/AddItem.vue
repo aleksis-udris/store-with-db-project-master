@@ -1,5 +1,6 @@
 <template>
   <h1>Add an Item</h1>
+  <h2 class="error-text" v-if="errorMessage !== null">{{errorMessage}}</h2>
   <div>
     <form @submit.prevent="addItem">
       <input v-model="item.name" placeholder="Name">
@@ -41,11 +42,13 @@ export default {
         count: 0,
         bar_code: '',
         date: ''
-      }
+      },
+      errorMessage: null,
     };
   },
   methods: {
     addItem() {
+      this.errorMessage = null;
       ItemService.addItem(this.item).then(() => {
         this.item.name = '';
         this.item.type = '';
@@ -53,7 +56,9 @@ export default {
         this.item.count = 0;
         this.item.bar_code = '';
         this.item.date = '';
-      });
+      }).catch((error) => {
+        this.errorMessage = error.response.data.message;
+      })
     }
   }
 };

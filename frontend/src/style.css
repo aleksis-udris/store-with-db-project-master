@@ -246,7 +246,15 @@ html::-webkit-scrollbar-thumb {
     text-align: center;
     text-transform: uppercase;
     font-size: 3vw;
+    margin: 0;
   }
+}
+
+.error-text {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 15px;
+  color: #cf1827;
 }
 
 #delete {

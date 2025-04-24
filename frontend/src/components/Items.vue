@@ -74,8 +74,9 @@ h1 {
     <button @click="cancel" id="cancel">Cancel</button>
   </div>
   </div>
-  <div v-if="editableItem"  class="pop-up-container">
+  <div v-if="editableItem"  class="pop-up-container" >
     <h3>Edit Item</h3>
+    <h4 v-if="errorMessage !== null" class="error-text">{{errorMessage}}</h4>
     <form @submit.prevent="updateItem">
       <input v-model="editableItem.name"/>
       <input v-model="editableItem.type"/>
@@ -99,6 +100,7 @@ export default {
       editableItem: null,
       tryingToDelete: false,
       tmpId: null,
+      errorMessage: null,
     };
   },
   created() {
@@ -108,28 +110,38 @@ export default {
     getItems() {
       ItemService.getItems().then(response => {
         this.items = response.data;
-      });
+      }).catch(error => {
+        this.errorMessage = error.response.data.message;
+      })
     },
     deleteItem() {
         ItemService.deleteItem(this.tmpId).then(() => {
           this.tryingToDelete = false;
           this.tmpId = null;
           this.getItems();
+        }).catch(error => {
+          this.errorMessage = error.response.data.message;
         })
     },
     editItem(id) {
       ItemService.getItem(id).then((response) => {
         this.editableItem = response.data;
+      }).catch(error => {
+        this.errorMessage = error.response.data.message;
       })
     },
     updateItem() {
+      this.errorMessage = null;
       ItemService.updateItem(this.editableItem).then(()=> {
         this.getItems();
         this.editableItem = null;
+      }).catch(error => {
+        this.errorMessage = error.response.data.message;
       })
     },
     cancel() {
       this.editableItem = null;
+      this.errorMessage = null;
       this.tryingToDelete = false;
     },
     safeDelete(id) {

@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <h1>Sign-Up</h1>
+  <h1>To Be Continued...</h1>
 </template>
 
 <style scoped>

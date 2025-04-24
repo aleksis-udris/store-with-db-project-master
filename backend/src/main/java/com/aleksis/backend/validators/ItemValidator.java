@@ -3,15 +3,19 @@ package com.aleksis.backend.validators;
 import com.aleksis.backend.exceptions.ErrorMessages;
 import com.aleksis.backend.exceptions.ItemValueNotValidException;
 import com.aleksis.backend.item.models.Item;
+import lombok.extern.log4j.Log4j2;
+import org.springframework.context.annotation.Bean;
+import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
 
+@Service
 public class ItemValidator {
     private ItemValidator() {
 
     }
 
-    public static void execute(Item item) {
+    public void execute(Item item) {
         LocalDate expDate = LocalDate.parse(item.getExpiration());
 
         if (item.getName() == null || item.getName().isEmpty()
