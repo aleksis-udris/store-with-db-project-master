@@ -68,12 +68,14 @@ h1 {
       </tr>
       </tbody>
     </table>
+  </div>
+
   <div class="pop-up-container" id="alert" v-if="tryingToDelete === true">
-    <h1>Are You Sure You Want To Delete This Item?</h1>
+    <h3>Are You Sure You Want To Delete This Item?</h3>
     <button type="submit" @click="deleteItem" id="delete">Delete</button>
     <button @click="cancel" id="cancel">Cancel</button>
   </div>
-  </div>
+
   <div v-if="editableItem"  class="pop-up-container" >
     <h3>Edit Item</h3>
     <h4 v-if="errorMessage !== null" class="error-text">{{errorMessage}}</h4>
@@ -83,7 +85,6 @@ h1 {
       <input v-model="editableItem.price" type="number" step="0.01"/>
       <input v-model="editableItem.count" type="number"/>
       <input v-model="editableItem.bar_code">
-      <input v-model="editableItem.expiration" type="date" value="2025-03-26"/>
       <button type="submit" id="confirm">Update</button>
       <button @click="cancel()" id="cancel">Cancel</button>
     </form>

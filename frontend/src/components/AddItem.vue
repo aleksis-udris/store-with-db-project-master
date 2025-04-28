@@ -6,13 +6,13 @@
       <input v-model="item.name" placeholder="Name">
       <input v-model="item.type" placeholder="Type">
       <input v-model="item.bar_code" placeholder="Bar Code">
+
       <div class="container">
         <input class="number-input" v-model="item.price" placeholder="Price" type="number" step="0.01">
-
         <input class="number-input" v-model="item.count" placeholder="Count" type="number">
-
         <input class="input-date" v-model="item.expiration" type="date" value="2025-02-27">
       </div>
+
       <button class="submit-btn" type="submit">Add</button>
     </form>
   </div>

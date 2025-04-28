@@ -1,0 +1,23 @@
+nav {
+    button {
+        margin-left: 5px;
+        margin-right: 5px;
+        background: #5d7364;
+        outline: none;
+
+        box-shadow:
+                5px 5px 10px #4a5c4e,
+                -5px -5px 10px #6d8172;
+    }
+
+    button:hover {
+        box-shadow: none;
+        outline: none;
+    }
+
+    button:active {
+        box-shadow:
+                inset 5px 5px 10px #4a5c4e,
+                inset -5px -5px 10px #6d8172;
+    }
+}

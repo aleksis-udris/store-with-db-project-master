@@ -29,14 +29,10 @@ public class ItemController {
     }
 
     @GetMapping("/")
-    public ResponseEntity<List<ItemDTO>> getItems() {
-        return getItemsService.execute(null);
-    }
+    public ResponseEntity<List<ItemDTO>> getItems() {return getItemsService.execute(null);}
 
     @GetMapping("/{id}")
-    public ResponseEntity<ItemDTO> getItem(@PathVariable Integer id) {
-        return getItemService.execute(id);
-    }
+    public ResponseEntity<ItemDTO> getItem(@PathVariable Integer id) {return getItemService.execute(id);}
 
     @PostMapping("/add")
     public ResponseEntity<ItemDTO> createItem(@RequestBody Item inputItem) {
